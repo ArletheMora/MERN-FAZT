@@ -1,0 +1,38 @@
+crear package.json
+    npm init -y
+
+instalar dependencias
+    npm i express mysql2 morgan
+    npm i nodemon -D
+
+agregar comando en package.json
+  "scripts": {
+    "dev": "nodemon server/index.js"
+  },
+
+
+correr en consola
+    npm run dev
+
+agregar en package.json para soportar los módulos
+    "type": "module",
+
+    --------
+
+
+Descargar e instalar docker (.exe)
+en la terminal
+Obter la imagen de mysql
+    docker pull mysql
+
+verificar que tenemos la imagen
+    docker images
+
+ejecutar definiendo la contraseña y la base de datos indicando que se va a poder ingresar desde el puerto 3306 
+    docker run --name mymysql -e MYSQL_ROOT_PASSWORD=faztpassword -e MYSQL_DATABASE=tasksdb -p 3306:3306 -d mysql
+
+ver lo que se está ejecutando
+    docker ps
+
+    docker exec -it mymysql bash 
+    mysql -u 
